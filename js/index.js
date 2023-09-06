@@ -44,12 +44,17 @@ function random(min, max) {
 }
 
 function starGame(){
+    // Display none para seccion de ataques y mensajes
     let selecAtaque = document.getElementById('selecAtaque')
     selecAtaque.style.display = 'none'
     let mensajes = document.getElementById('mensajes')
     mensajes.style.display = 'none'
+
+    //Boton seleccion de Personajes 
     let botonSelectWarrior = document.getElementById('botonSelectWarrior');
     botonSelectWarrior.addEventListener('click', playerSelect);
+
+    //Boton de reinicio del juego (Disparador y display none)
     let botonReiniciar = document.getElementById('botonReiniciar')
     botonReiniciar.addEventListener('click', reiniciarJuego)
     botonReiniciar.style.display = 'none'
@@ -57,8 +62,11 @@ function starGame(){
 
 
 function playerSelect() {
+    //Display block para mostrar seleccion de personajes
     let selecAtaque = document.getElementById('selecAtaque')
     selecAtaque.style.display = 'block'
+
+    //Se muestra el nombre de los personaje seleccionado en la seccion de elegir ataque
     let naruto = document.getElementById('naruto');
     let minato = document.getElementById('minato');
     let madara = document.getElementById('madara');
@@ -66,16 +74,12 @@ function playerSelect() {
     let spanPlayer = document.getElementById('spanNombreGuerrero');
 
     if(naruto.checked){
-        alert('Selecionaste a: Naruto Uzumaki como tu guerrero. Es el prota, que falta de imaginacion tienes.')
         spanPlayer.innerHTML = 'Naruto';
     } else if(minato.checked){
-        alert('Selecionaste a: Minato Namikaze como tu guerrero. Ni tu vas a ver cual ataque se va a inventar.')
         spanPlayer.innerHTML = 'Minato';
     } else if(madara.checked){
-        alert('Selecionaste a: Madara Uchiha como tu guerrero. Ya tu rival valio verga.')
         spanPlayer.innerHTML = 'Madara';
     } else if(kakashi.checked){
-        alert('Selecionaste a: Kakashi Hatake como tu guerrero. No creo que ganes contra los otros tres, pero te aplaudo por valiente.')
         spanPlayer.innerHTML = 'Kakashi';
     } else{
         alert('Selecciona un combatiente primero')
@@ -85,6 +89,7 @@ function playerSelect() {
     combatStrikes();
 }
 
+//Funcion de seleccion aleatoria de personaje para la computadora y se muestra en el Span de la pc
 function rivalSelect(){
     let pc = random(1,4);
     let result = "";
@@ -103,9 +108,11 @@ function rivalSelect(){
 }
 
 function combatStrikes(){
-
+    //Muestra la seccion de mensajes donde se revela el historial de luchas
     let mensajes = document.getElementById('mensajes')
     mensajes.style.display = 'block'
+
+
     let fireButton = document.getElementById('botonFuego')
     fireButton.addEventListener('click', PlayerAtack)
     let watterButton = document.getElementById('botonAgua')
@@ -116,9 +123,11 @@ function combatStrikes(){
     earthButton.addEventListener('click',PlayerAtack)
     let ataqueJugadorLanzado = document.getElementById('ataqueJugadorLanzado')
 
+    //
     function PlayerAtack(){
 
         let message = "";
+
         switch(this.id){
             case 'botonFuego' :        
                 message = "Seleccionaste ataque de Fuego";
@@ -137,7 +146,8 @@ function combatStrikes(){
                 ataqueJugadorLanzado.innerHTML = "Tierra 🌱"
                 break;
         }
-
+        
+        //MEJORAR: Que no se disparen alertas en la seleccion de ataques, sino que aparezcan en la seccion de historial de batalla
         alert(message)
 
         rivalStrikes(); 
@@ -161,11 +171,15 @@ function combatStrikes(){
             result = 'Pc selecciono ataque de Tierra';
             ataqueRivalLanzado.innerHTML = "Tierra 🌱"
         } 
-    
+        
+        
+        //MEJORAR: Que no se disparen alertas en la seleccion de ataques, sino que aparezcan en la seccion de historial de batalla
         alert(result);  
         mensajesDeAtaques()
     }
 
+
+    
     // function batallas(){
 
     //     let resultado = document.getElementById('resultado')

@@ -61,6 +61,10 @@ input{
     justify-content: center;
 } 
 
+.personajes:hover{
+    background: black;
+}
+
 .personajes img{
     width: 120px;
 }
