@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>NarutoVs</title>
+    <script src="./js/index.js"></script>
+</head>
+<body>
+
+    <section id="selecMascotas">
+        <h1 id="titulo">NARUTO VS</h1>
+        <h2 id="subtitulo">Elige tu guerrero: </h2>
+        
+        <div id="tarjetas">
+            <label class="personajes" for="naruto">
+                <p>Naruto</p>
+                <img src="./assets/narutopeque.png" alt="Naruto">
+            </label>
+            <input type="radio" id="naruto" name="pet">
+    
+            <label class="personajes" for="minato">
+                <p>Minato</p>
+                <img src="./assets/minatopeque.png" alt="Minato">
+            </label>
+            <input type="radio" id="minato" name="pet">
+    
+            <label class="personajes" for="madara">
+                <p>Madara</p>
+                <img src="./assets/madarapeque.png" alt="Madara">
+            </label>
+            <input type="radio" id="madara" name="pet">
+    
+            <label class="personajes"for="kakashi">
+                <p>Kakashi</p>
+                <img src="./assets/kakashipeque.png" alt="Kakashi">
+            </label>
+            <input type="radio" id="kakashi" name="pet">    
+        </div>
+ 
+        <button id="botonSelectWarrior">Seleccionar</button>
+    </section>
+
+    <section id="selecAtaque">
+
+        <h2>Elige tu ataque</h2>
+        <diV>
+            <p>Tu guerrero: <span id="spanNombreGuerrero"></span> tiene <span></span> de vida</p>
+            <p>El guerrero enemigo: <span id="spanNombrePc"></span>, tiene <span></span> vida</p>
+            <button id="botonFuego">🔥</button>
+            <button id="botonAgua">💧</button>
+            <button id="botonRayo">⚡</button>
+            <button id="botonTierra">🌱</button>
+        </diV>
+    </section>
+
+    <section id="mensajes">
+        <p>Tu guerrero lanzo: <span id="ataqueJugadorLanzado"></span></p>
+        <p>Su rival lanzo: <span id="ataqueRivalLanzado"></span></p></p>
+        <p id="resultadoMensaje">Resultado:  </p>
+    </section>
+
+    <section id="reinicio">
+        <button id="botonReiniciar">Reiniciar</button>
+    </section>
+
+</body>
+</html>

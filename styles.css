@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+body{
+    background-color: #900C3F;
+    background-image: url('./assets/konoha.jpg');
+    background-size: cover;
+    font-family: 'Special Elite', cursive;
+    color: white;
+}
+
+#selecMascotas{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input{
+    display: none;
+}
+
+#titulo{
+    font-size: 56px;  
+    text-shadow: 2px 2px 0 black, -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black;
+} 
+
+#subtitulo {
+    font-size: 28px; 
+    text-shadow: 2px 2px 0 black, -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black;
+}   
+
+#tarjetas{
+    display: flex;
+    gap: 10px;
+    text-shadow: 2px 2px 0 black, -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black;
+}
+
+#botonSelectWarrior {
+    font-family: 'Special Elite', cursive;
+    font-size: 20px;
+    text-shadow: 2px 2px 0 black, -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black;
+    background-color: #F94C10;
+    color: white;
+    width: 160px;
+    height: 72px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin: 52px;
+}
+
+.personajes{
+    background-color: #C70039;
+    width: 232px;
+    height: 177px;
+    margin: 12px;
+    padding: 24px ;
+    border: 2px outset black;
+    box-sizing: border-box;
+    border-radius: 20px; 
+    display: flex;
+    justify-content: center;
+} 
+
+.personajes img{
+    width: 120px;
+}
+
+
+
+
+
