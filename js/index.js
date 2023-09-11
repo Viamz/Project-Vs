@@ -1,4 +1,4 @@
-let naruto = {
+let zeus = {
     basePower: 1000,
     life: 2000,
     fire: 500,
@@ -8,7 +8,7 @@ let naruto = {
     wind: 900 
 }
 
-let minato = {
+let ares = {
     basePower: 1000,
     life: 2000,
     fire: 600,
@@ -18,7 +18,7 @@ let minato = {
     wind: 500 
 }
 
-let madara = {
+let odin = {
     basePower: 1000,
     life: 2000,
     fire: 950,
@@ -28,7 +28,7 @@ let madara = {
     wind: 200 
 }
 
-let kakashi = {
+let thor = {
     basePower: 1000,
     life: 2000,
     fire: 650,
@@ -58,13 +58,21 @@ function starGame(){
     let botonReiniciar = document.getElementById('botonReiniciar')
     botonReiniciar.addEventListener('click', reiniciarJuego)
     botonReiniciar.style.display = 'none'
+
+    //Display none para tarjetas personajes seleccionados para la batalla.
+    let selectedPjs = document.getElementById('selectedPjs');
+    selectedPjs.style.display = 'none'
 }
 
 
 function playerSelect() {
     //Display block para mostrar seleccion de personajes
-    let selecAtaque = document.getElementById('selecAtaque')
-    selecAtaque.style.display = 'block'
+    let selecAtaque = document.getElementById('selecAtaque');
+    selecAtaque.style.display = 'block';
+
+    //Display none (Ocultar) seccion despues de presionar el boton de seleccionar personaje 
+    let selecPjs = document.getElementById('selecPjs');
+    selecPjs.style.display = 'none';
 
     //Se muestra el nombre de los personaje seleccionado en la seccion de elegir ataque
     let naruto = document.getElementById('naruto');
@@ -112,6 +120,9 @@ function combatStrikes(){
     let mensajes = document.getElementById('mensajes')
     mensajes.style.display = 'block'
 
+    //display block para mostrar las tarjetas de personajes seleccionados para la batalla. 
+    let selectedPjs = document.getElementById('selectedPjs');
+    selectedPjs.style.display = 'block';   
 
     let fireButton = document.getElementById('botonFuego')
     fireButton.addEventListener('click', PlayerAtack)
@@ -121,9 +132,8 @@ function combatStrikes(){
     thunderButton.addEventListener('click',PlayerAtack)
     let earthButton = document.getElementById('botonTierra')
     earthButton.addEventListener('click',PlayerAtack)
-    let ataqueJugadorLanzado = document.getElementById('ataqueJugadorLanzado')
+    let ataqueJugadorLanzado = document.getElementById('ataqueJugadorLanzado');
 
-    //
     function PlayerAtack(){
 
         let message = "";
@@ -150,8 +160,7 @@ function combatStrikes(){
         //MEJORAR: Que no se disparen alertas en la seleccion de ataques, sino que aparezcan en la seccion de historial de batalla
         alert(message)
 
-        rivalStrikes(); 
-        attackPoints()      
+        rivalStrikes();     
     }
 
     function rivalStrikes(){
@@ -175,6 +184,7 @@ function combatStrikes(){
         
         //MEJORAR: Que no se disparen alertas en la seleccion de ataques, sino que aparezcan en la seccion de historial de batalla
         alert(result);  
+
         mensajesDeAtaques()
     }
 

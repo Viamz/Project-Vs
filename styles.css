@@ -8,7 +8,7 @@ body{
     color: white;
 }
 
-#selecMascotas{
+#selecPjs{
     justify-content: center;
     display: flex;
     flex-direction: column;
