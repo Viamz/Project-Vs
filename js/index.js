@@ -1,48 +1,3 @@
-let zeus = {
-    basePower: 1000,
-    life: 2000,
-    fire: 500,
-    thunder: 600,
-    water: 380,
-    earth: 380,
-    wind: 900 
-}
-
-let ares = {
-    basePower: 1000,
-    life: 2000,
-    fire: 600,
-    thunder: 900,
-    water: 380,
-    earth: 380,
-    wind: 500 
-}
-
-let odin = {
-    basePower: 1000,
-    life: 2000,
-    fire: 950,
-    thunder: 700,
-    water: 380,
-    earth: 480,
-    wind: 200 
-}
-
-let thor = {
-    basePower: 1000,
-    life: 2000,
-    fire: 650,
-    thunder: 650,
-    water: 670,
-    earth: 600,
-    wind: 500 
-}
-
-
-function random(min, max) {
-    return Math.floor(Math.random()* (max - min + 1) + min)
-}
-
 function starGame(){
     // Display none para seccion de ataques y mensajes
     let selecAtaque = document.getElementById('selecAtaque')
@@ -63,7 +18,6 @@ function starGame(){
     let selectedPjs = document.getElementById('selectedPjs');
     selectedPjs.style.display = 'none'
 }
-
 
 function playerSelect() {
     //Display block para mostrar seleccion de personajes
@@ -97,23 +51,6 @@ function playerSelect() {
     combatStrikes();
 }
 
-//Funcion de seleccion aleatoria de personaje para la computadora y se muestra en el Span de la pc
-function rivalSelect(){
-    let pc = random(1,4);
-    let result = "";
-    
-    if(pc == 1 ){
-        result = spanNombrePc.innerHTML = 'Naruto';
-    } else if(pc == 2){
-        result = spanNombrePc.innerHTML = 'Minato';
-    } else if(pc == 3){
-        result = spanNombrePc.innerHTML = 'Madara';
-    } else if(pc == 4){
-        result = spanNombrePc.innerHTML = 'Kakashi';
-    } 
-
-    return result;
-}
 
 function combatStrikes(){
     //Muestra la seccion de mensajes donde se revela el historial de luchas
@@ -187,19 +124,6 @@ function combatStrikes(){
 
         mensajesDeAtaques()
     }
-
-
-    
-    // function batallas(){
-
-    //     let resultado = document.getElementById('resultado')
-
-    //     let calculo = 0;
-        
-       
-
-    // }
-
 
     botonReiniciar.style.display = 'block'
 }

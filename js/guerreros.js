@@ -1,4 +1,4 @@
-let naruto = {
+let zeus = {
     basePower: 1000,
     life: 2000,
     fire: 500,
@@ -8,7 +8,7 @@ let naruto = {
     wind: 900 
 }
 
-let minato = {
+let ares = {
     basePower: 1000,
     life: 2000,
     fire: 600,
@@ -18,7 +18,7 @@ let minato = {
     wind: 500 
 }
 
-let madara = {
+let odin = {
     basePower: 1000,
     life: 2000,
     fire: 950,
@@ -28,7 +28,7 @@ let madara = {
     wind: 200 
 }
 
-let kakashi = {
+let thor = {
     basePower: 1000,
     life: 2000,
     fire: 650,
@@ -36,4 +36,8 @@ let kakashi = {
     water: 670,
     earth: 600,
     wind: 500 
+}
+
+function random(min, max) {
+    return Math.floor(Math.random()* (max - min + 1) + min)
 }
