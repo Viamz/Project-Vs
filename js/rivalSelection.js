@@ -5,13 +5,13 @@ function rivalSelect(){
     let result = "";
     
     if(pc == 1 ){
-        result = spanNombrePc.innerHTML = 'Naruto';
+        result = spanNombrePc.innerHTML = 'Zeus';
     } else if(pc == 2){
-        result = spanNombrePc.innerHTML = 'Minato';
+        result = spanNombrePc.innerHTML = 'Poseidon';
     } else if(pc == 3){
-        result = spanNombrePc.innerHTML = 'Madara';
+        result = spanNombrePc.innerHTML = 'Odin';
     } else if(pc == 4){
-        result = spanNombrePc.innerHTML = 'Kakashi';
+        result = spanNombrePc.innerHTML = 'Thor';
     } 
 
     return result;

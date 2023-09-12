@@ -95,7 +95,6 @@ function combatStrikes(){
         
         //MEJORAR: Que no se disparen alertas en la seleccion de ataques, sino que aparezcan en la seccion de historial de batalla
         alert(message)
-
         rivalStrikes();     
     }
 
@@ -120,6 +119,7 @@ function combatStrikes(){
         
         //MEJORAR: Que no se disparen alertas en la seleccion de ataques, sino que aparezcan en la seccion de historial de batalla
         alert(result);  
+        battleSystem()
 
         mensajesDeAtaques()
     }
