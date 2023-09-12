@@ -8,7 +8,7 @@ let zeus = {
     wind: 900 
 }
 
-let ares = {
+let poseidon = {
     basePower: 1000,
     life: 2000,
     fire: 600,
@@ -36,8 +36,4 @@ let thor = {
     water: 670,
     earth: 600,
     wind: 500 
-}
-
-function random(min, max) {
-    return Math.floor(Math.random()* (max - min + 1) + min)
 }

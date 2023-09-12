@@ -29,20 +29,20 @@ function playerSelect() {
     selecPjs.style.display = 'none';
 
     //Se muestra el nombre de los personaje seleccionado en la seccion de elegir ataque
-    let naruto = document.getElementById('naruto');
-    let minato = document.getElementById('minato');
-    let madara = document.getElementById('madara');
-    let kakashi = document.getElementById('kakashi');
+    let zeus = document.getElementById('zeus');
+    let poseidon = document.getElementById('poseidon');
+    let odin = document.getElementById('odin');
+    let thor = document.getElementById('thor');
     let spanPlayer = document.getElementById('spanNombreGuerrero');
 
-    if(naruto.checked){
-        spanPlayer.innerHTML = 'Naruto';
-    } else if(minato.checked){
-        spanPlayer.innerHTML = 'Minato';
-    } else if(madara.checked){
-        spanPlayer.innerHTML = 'Madara';
-    } else if(kakashi.checked){
-        spanPlayer.innerHTML = 'Kakashi';
+    if(zeus.checked){
+        spanPlayer.innerHTML = 'Zeus';
+    } else if(poseidon.checked){
+        spanPlayer.innerHTML = 'Poseidon';
+    } else if(odin.checked){
+        spanPlayer.innerHTML = 'Odin';
+    } else if(thor.checked){
+        spanPlayer.innerHTML = 'Thor';
     } else{
         alert('Selecciona un combatiente primero')
     }
@@ -50,7 +50,6 @@ function playerSelect() {
     rivalSelect();
     combatStrikes();
 }
-
 
 function combatStrikes(){
     //Muestra la seccion de mensajes donde se revela el historial de luchas
